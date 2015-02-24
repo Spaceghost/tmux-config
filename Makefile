@@ -1,6 +1,9 @@
-TARGETS = $(HOME)/.tmux.conf
-SHELL = /bin/bash
 CWD = $(shell pwd)
+SHELL = /bin/bash
+MANIFEST = $(CWD)/Manifest
+
+# Fix
+TARGETS = $(HOME)/.tmux.conf
 
 define check_file
 	@if [[ -e $1 && "$(OVERWRITE)" != "1" ]]; then \
